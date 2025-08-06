@@ -1,3 +1,15 @@
+/**
+ * ESLint configuration file
+ * @description Configuration for ESLint using flat config format. Sets up WordPress coding standards.
+ *
+ * @property {Array} ignores - Patterns of files to ignore during linting
+ * @property {Object} files - File patterns to apply rules to
+ * @property {Object} plugins - ESLint plugins configuration
+ * @property {Object} rules - Custom ESLint rules
+ * @property {Object} languageOptions - Language-specific options including globals
+ *
+ * @exports {Array} Default ESLint configuration array
+ */
 import js from '@eslint/js';
 import wp from '@wordpress/eslint-plugin';
 import globals from 'globals';
@@ -8,7 +20,7 @@ export default [
 	},
 	js.configs.recommended,
 	{
-		files: ['**/*.{js,mjs,cjs}'],
+		files: ['**/*.{js,mjs,cjs,ts,tsx}'],
 		plugins: {
 			'@wordpress/eslint-plugin': wp,
 		},
